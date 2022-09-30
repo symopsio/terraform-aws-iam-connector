@@ -31,13 +31,13 @@ By default, the IAM connector can only modify groups that are within the `/sym/`
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.7 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 3.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0 |
 
 ## Modules
 
@@ -59,7 +59,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_environment"></a> [environment](#input\_environment) | An environment qualifier for the resources this module creates, to support a Terraform SDLC. | `string` | n/a | yes |
 | <a name="input_group_config"></a> [group\_config](#input\_group\_config) | List of group resources the connector can modify. Each group resource is an object that contains a path and a name property. Both the path and name can contain wildcards. | <pre>list(object(<br>    { path = string, name = string }<br>  ))</pre> | <pre>[<br>  {<br>    "name": "*",<br>    "path": "/sym/"<br>  }<br>]</pre> | no |
-| <a name="input_runtime_role_arns"></a> [runtime\_role\_arns](#input\_runtime\_role\_arns) | ARNs of the runtime connector roles that are trusted to assume the SSO role. | `list(string)` | n/a | yes |
+| <a name="input_runtime_role_arns"></a> [runtime\_role\_arns](#input\_runtime\_role\_arns) | ARNs of the runtime connector roles that are trusted to assume the IAM role. | `list(string)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags to apply to resources | `map(string)` | `{}` | no |
 
 ## Outputs
