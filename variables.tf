@@ -18,7 +18,7 @@ variable "group_config" {
 }
 
 variable "runtime_role_arns" {
-  description = "ARNs of the runtime connector roles that are trusted to assume the SSO role."
+  description = "ARNs of the runtime connector roles that are trusted to assume the IAM role."
   type        = list(string)
 }
 

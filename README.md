@@ -8,7 +8,7 @@ Only the supplied `runtime_role_arns` are trusted to assume this role.
 
 ```hcl
 module "iam_connector" {
-  source  = "symopsio/iam-connector/sym"
+  source  = "symopsio/iam-connector/aws"
   version = ">= 1.0.0"
 
   environment = "sandbox"
