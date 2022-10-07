@@ -34,6 +34,7 @@ resource "aws_iam_policy" "iam" {
   path = "/sym/"
 
   description = "Allows Sym to manage IAM Groups"
+  tags        = var.tags
   policy      = <<EOT
 {
     "Version": "2012-10-17",
