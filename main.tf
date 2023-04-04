@@ -49,7 +49,10 @@ resource "aws_iam_policy" "iam" {
         },
         {
             "Action": [
-                "iam:GetUser"
+                "iam:GetUser",
+                "iam:GetGroup",
+                "iam:ListGroupsForUser",
+                "iam:ListGroups"
             ],
             "Effect": "Allow",
             "Resource": [
